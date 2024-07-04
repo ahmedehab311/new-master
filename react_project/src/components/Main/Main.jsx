@@ -1,10 +1,11 @@
-
 import { Box, Container, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import img from "./main.jpg";
 function Main() {
   return (
-    <Container sx={{ display: "flex", alignItems: "center", flexGrow: 1 ,mt:4 }}>
+    <Container
+      sx={{ display: "flex", alignItems: "center", flexGrow: 1, mt: 4 }}
+    >
       <Box sx={{ flexGrow: 1 }}>
         <img src={img} width="500px" height="400px" alt="img" className="img" />
       </Box>
@@ -44,7 +45,11 @@ function Main() {
         <Button
           variant="outlined"
           color="error"
-          sx={{ textTransform: "uppercase", fontSize: "15px", fontWeight: "bold" }}
+          sx={{
+            textTransform: "uppercase",
+            fontSize: "15px",
+            fontWeight: "bold",
+          }}
           className="btn"
         >
           read more
