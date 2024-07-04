@@ -3,15 +3,20 @@ import { Stack, Container, Typography } from "@mui/material";
 import Box from "./box";
 function Menu() {
   return (
-    <Container >
+    <Container>
       <Stack>
         <Typography
-          sx={{ textAlign: "center", fontSize: "33px", fontWeight: "bold" }}
+          sx={{
+            textAlign: "center",
+            fontSize: "33px",
+            fontWeight: "bold",
+            color: "#fff",
+            my:2
+          }}
         >
           MENU
         </Typography>
         <Stack>
-
           <Box />
         </Stack>
         {/* <Stack>

@@ -1,0 +1,7 @@
+npm i 
+
+
+npm install -g vite
+npm install vite
+npm install @mui/material @emotion/react @emotion/styled  @mui/icons-material
+npm install react-router-dom

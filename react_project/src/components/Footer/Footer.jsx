@@ -6,7 +6,7 @@ function Footer() {
     return (
 
         <>
-            <Box sx={{ mt: "81px", py: 3, px: 1, display: "flex", alignItems: "center", justifyContent: "space-between", borderTop: "2px solid #000", background: "#e72323", position: "relative" }}>
+            <Box sx={{ mt: "5px", py: 3, px: 1, display: "flex", alignItems: "center", justifyContent: "space-between", borderTop: "2px solid #000", background: "#e72323", position: "relative" }}>
                 <Stack>
                     <Box1 />
                 </Stack>

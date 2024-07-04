@@ -1,12 +1,12 @@
 
 import { Box, Container, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
-import img from "../Hero/images/popular-03.jpg";
+import img from "./main.jpg";
 function Main() {
   return (
     <Container sx={{ display: "flex", alignItems: "center", flexGrow: 1 ,mt:4 }}>
       <Box sx={{ flexGrow: 1 }}>
-        <img src={img} width="200px" height={300} alt="img" className="img" />
+        <img src={img} width="500px" height="400px" alt="img" className="img" />
       </Box>
       <Box sx={{ ml: 2 }}>
         <Typography
