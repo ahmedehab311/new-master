@@ -1,5 +1,4 @@
-.box{
- 
+.box {
 }
 .css-1oqqzyl-MuiContainer-root {
   background: url(../Hero/images/test2.jpg) 50% / cover no-repeat !important;
@@ -7,10 +6,10 @@
   margin-bottom: 15px;
   max-width: 100% !important;
   color: #fff !important;
-  display: flex!important;
+  display: flex !important;
   gap: 20px !important;
-  flex-wrap: wrap!important;
+  flex-wrap: wrap !important;
 }
-.css-oyk6x7-MuiPaper-root-MuiCard-root{
-color: #fff !important;
+.css-oyk6x7-MuiPaper-root-MuiCard-root {
+  color: #fff !important;
 }
