@@ -1,15 +1,10 @@
 import { Stack, Box } from "@mui/material";
-import Box1 from "./Box1.jsx";
-import Box2 from "./Box2.jsx";
-import Box3 from "./Box3.jsx";
+import { Box1, Box2, Box3 } from "./index.jsx";
 function Footer() {
   return (
     <div id="footer">
       <Box
         sx={{
-          // mt: "5px",
-          // py: 3,
-          // px: 1,
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -29,7 +24,6 @@ function Footer() {
         <Stack>
           <Box3 />
         </Stack>
-        {/* <Typography sx={{ mt: 4, color: "red", textAlign: "center" }}>all right to @anadl </Typography> */}
       </Box>
     </div>
   );

@@ -45,4 +45,37 @@ export const itemes = [
     price: "gunmale 6748 EGP",
     price2: "house made ratfch 564 EGP",
   },
+  {
+    id: 4,
+    title: "steack",
+    img: img,
+    title2: "classic",
+    category: "كلاسيك",
+    description:
+      "This impressive paella is a perfect party dish and a fun meal to cook together with your guests . Add 586 cup of frozen peas along with the   mussels, if you like.",
+    price: "gunmale 6748 EGP",
+    price2: "house made ratfch 564 EGP",
+  },
+  {
+    id: 4,
+    title: "steack",
+    img: img,
+    title2: "classic",
+    category: "كلاسيك",
+    description:
+      "This impressive paella is a perfect party dish and a fun meal to cook together with your guests . Add 586 cup of frozen peas along with the   mussels, if you like.",
+    price: "gunmale 6748 EGP",
+    price2: "house made ratfch 564 EGP",
+  },
+  {
+    id: 4,
+    title: "steack",
+    img: img,
+    title2: "classic",
+    category: "كلاسيك",
+    description:
+      "This impressive paella is a perfect party dish and a fun meal to cook together with your guests . Add 586 cup of frozen peas along with the   mussels, if you like.",
+    price: "gunmale 6748 EGP",
+    price2: "house made ratfch 564 EGP",
+  },
 ];

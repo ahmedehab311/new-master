@@ -1,8 +1,9 @@
 import "./Header.css";
+import { useState } from "react";
 import { Drawer, IconButton, Link, Stack, useMediaQuery } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
-import { useState } from "react";
+import HeaderBigMedia from "./HeaderBigMedia";
+
 function Header() {
   const [state, setState] = useState({
     top: false,
@@ -25,33 +26,12 @@ function Header() {
     setState({ ...state, right: false });
   };
   return (
-    // <Box >
     <Stack sx={{ bgcolor: "#050304", p: 3 }}>
       {useMediaQuery("(min-width:1000px)") && (
-        <Stack
-          gap={2}
-          direction={"row"}
-          alignItems={"center"}
-          sx={{ textTransform: "uppercase", p: "10px !important" }}
-          className="headerMenu"
-        >
-          <LanguageOutlinedIcon
-            sx={{
-              fontSize: "30px",
-              cursor: "pointer",
-              color: "#777",
-              mr: 5,
-              // position:"relative"
-            }}
-          />
-          <Link href="#menu">Menu</Link>
-          <Link href="#about">About Us</Link>
-          <Link href="#footer">Locaiton</Link>
-          <Link href="#">order online</Link>
-          <Link href="#footer">contact us</Link>
-        </Stack>
+  <HeaderBigMedia /> 
       )}
 
+     
       {useMediaQuery("(max-width:1000px)") && (
         <>
           <IconButton
@@ -78,7 +58,6 @@ function Header() {
           </IconButton>
         </>
       )}
-
       <Drawer
         anchor={"right"}
         open={state["right"]}
@@ -95,7 +74,6 @@ function Header() {
           Locaiton
         </Link>
         <Link href="#" onClick={closeDrawer}>
-          {" "}
           order online
         </Link>
         <Link href="#footer" onClick={closeDrawer}>

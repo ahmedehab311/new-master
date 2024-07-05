@@ -1,24 +1,31 @@
 import { Container, Typography, Box } from "@mui/material";
 import Card from "@mui/material/Card";
-import "./box.css";
+import { useNavigate } from "react-router-dom";
 import { itemes } from "./itemes.js";
-function box() {
+
+function Category() {
+  const navigate = useNavigate();
+
   return (
-    <Container
-      // sx={{ display: "flex", gap: 2, flexWrap: "wrap", color: "#fff" }}
-      className="box"
-    >
-      {itemes.map((item) => {
-        return (
+    <Container className="box" sx={{ mt: 4 }}>
+      <Typography
+        variant="h4"
+        sx={{ textAlign: "center", mb: 2, textTransform: "uppercase" }}
+      >
+        More Cards
+      </Typography>
+      <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", justifyContent: "center" }}>
+        {itemes.map((item) => (
           <Card
+            key={item.id}
             sx={{
               maxWidth: 230,
               p: 1,
               border: "2px solid #fff",
               background: "#000",
               borderRadius: "20px",
+              cursor: "pointer",
             }}
-            key={item.id}
           >
             <Typography
               variant="h3"
@@ -31,11 +38,10 @@ function box() {
             >
               {item.title}
             </Typography>
-
             <img
               src={item.img}
               width="50px"
-              style={{ display: "flex" }}
+              style={{ display: "flex", margin: "0 auto" }}
               alt=""
             />
             <Typography variant="h4" sx={{ fontSize: "20px", my: 1 }}>
@@ -61,12 +67,18 @@ function box() {
               <Typography sx={{ color: "#777" }}>{item.price2}</Typography>
             </Box>
           </Card>
-        );
-      })}
-
-
+        ))}
+      </Box>
+      <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
+        <Typography
+          onClick={() => navigate("/")}
+          sx={{ cursor: "pointer", color: "#00f", textDecoration: "underline" }}
+        >
+          Go Back
+        </Typography>
+      </Box>
     </Container>
   );
 }
 
-export default box;
+export default Category;
