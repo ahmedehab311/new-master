@@ -63,7 +63,7 @@ ul {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   /* color: var(--black-color); */
 }
 
@@ -92,8 +92,6 @@ input {
   transition: none !important;
 }
 
-/* hero */
-
 /* box */
 .css-sgbe1q-MuiPaper-root-MuiCard-root {
   background-color: #000 !important;
@@ -111,15 +109,22 @@ input {
   font-size: 20px;
   margin-right: 6px;
 }
+/* media  */
 
-@media (max-width: 700px) {
-  .css-1f7bs8i {
+@media (max-width: 900px) {
+  .css-1059fn5 { 
     flex-direction: column;
+    padding: 20px !important;
   }
 }
 
-/* media  */
 /* main  */
+.borderMain {
+  background-color: #ff0000;
+  width: 52px;
+  height: 3px;
+}
+
 @media (max-width: 900px) {
   .css-1dzpn6f-MuiContainer-root {
     flex-direction: column;
@@ -134,4 +139,8 @@ input {
     align-items: center;
     justify-content: center;
   }
+  .borderMain {
+    display: none;
+  }
 }
+

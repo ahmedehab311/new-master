@@ -1,6 +1,6 @@
 // import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { Stack, Box } from "@mui/material";
-import PinDropIcon from "@mui/icons-material/PinDrop";
+// import PinDropIcon from "@mui/icons-material/PinDrop";
 
 function box2() {
   return (
@@ -16,7 +16,7 @@ function box2() {
         >
           <Box sx={{ display: "flex" }}>
             <Stack>
-              <PinDropIcon fontSize="15px" />
+              {/* <PinDropIcon fontSize="15px" /> */}
             </Stack>
             <Stack>Location</Stack>
             <input type="text" className="inputFooter" />

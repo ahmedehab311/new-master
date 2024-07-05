@@ -2,11 +2,12 @@
   background: url(../images/test2.jpg) 50% / cover no-repeat;
 }
 .logoImg {
-  width: 20%;
   display: block;
   position: absolute;
-  /* display: flex; */
-  top: 7%;
+  width: 150px;
+  height: 100px;
+  top: 4%;
+  left: 5px;
 }
 /* slider style */
 .swiper {

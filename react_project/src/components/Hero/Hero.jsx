@@ -1,5 +1,3 @@
-import img1 from "./images/1.jpg";
-import img2 from "./images/2.jpg";
 import logo from "./images/logooo.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -65,7 +63,6 @@ function Hero() {
               </SwiperSlide>
             );
           })}
-
         </Swiper>
       </Box>
     </>

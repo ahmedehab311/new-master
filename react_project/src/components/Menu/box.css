@@ -1,9 +1,7 @@
-.box {
-}
 .css-1oqqzyl-MuiContainer-root {
   background: url(../Hero/images/test2.jpg) 50% / cover no-repeat !important;
   margin-top: 36px;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   max-width: 100% !important;
   color: #fff !important;
   display: flex !important;
@@ -12,4 +10,8 @@
 }
 .css-oyk6x7-MuiPaper-root-MuiCard-root {
   color: #fff !important;
+}
+/* menu  */
+.css-1oqqzyl-MuiContainer-root {
+  padding: 100px !important;
 }

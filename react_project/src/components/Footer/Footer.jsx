@@ -4,19 +4,21 @@ import Box2 from "./Box2.jsx";
 import Box3 from "./Box3.jsx";
 function Footer() {
   return (
-    <>
+    <div id="footer">
       <Box
         sx={{
-          mt: "5px",
-          py: 3,
-          px: 1,
+          // mt: "5px",
+          // py: 3,
+          // px: 1,
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          borderTop: "2px solid #000",
+          borderTop: "3px solid #fff",
           background: "#e72323",
           position: "relative",
+          p: 1,
         }}
+        gap={2}
       >
         <Stack>
           <Box1 />
@@ -29,7 +31,7 @@ function Footer() {
         </Stack>
         {/* <Typography sx={{ mt: 4, color: "red", textAlign: "center" }}>all right to @anadl </Typography> */}
       </Box>
-    </>
+    </div>
   );
 }
 
