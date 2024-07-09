@@ -7,7 +7,6 @@ import "swiper/css/navigation";
 import "./Slider/Slider.css";
 import { images } from "./imagesArray";
 
-import Slider from "react-slick";
 
 function Hero() {
   return (
@@ -25,7 +24,8 @@ function Hero() {
           <img src={logo} className="logoImg" alt="logo" />
         </Stack>
 
-        <Swiper
+   <Box className="sli">
+   <Swiper
           slidesPerView={1}
           // spaceBetween={10}
           pagination={{
@@ -44,7 +44,7 @@ function Hero() {
                     className="img-fluid"
                     src={item.img}
                     style={{
-                      width: "400px",
+                      width: "450px",
                       height: "500px",
                       marginTop: "100px",
                     }}
@@ -55,6 +55,7 @@ function Hero() {
             );
           })}
         </Swiper>
+</Box>
       </Stack>
     </>
   );
