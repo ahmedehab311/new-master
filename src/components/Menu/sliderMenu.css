@@ -19,6 +19,7 @@
   display: block;
   height: 280px;
   object-fit: cover;
+  margin-bottom: 35px;
 }
 
 .swiper-button-prev,

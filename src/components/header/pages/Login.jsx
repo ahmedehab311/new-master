@@ -1,33 +1,34 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 import { Box, Button, TextField, Typography, Stack } from "@mui/material";
 import { useState } from "react";
 import { Link, Link as RouterLink } from "react-router-dom";
 
-const loginUser = async (credentials) => {
-  const response = await fetch("api here", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(credentials)
-  });
-  return await response.json();
-};
+// const loginUser = async (credentials) => {
+//   const response = await fetch("api here", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json"
+//     },
+//     body: JSON.stringify(credentials)
+//   });
+//   return await response.json();
+// };
 
 
-function LoginPage(props) {
+function LoginPage() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = async (event) => {
-    event.preventDefault();
-    const response = await loginUser({
-      userName,
-      password
-    });
-    console.log(response.token);
-    props.setToken(response.token);
-  };
+  // const handleLogin = async (event) => {
+  //   event.preventDefault();
+  //   const response = await loginUser({
+  //     userName,
+  //     password
+  //   });
+  //   console.log(response.token);
+  //   props.setToken(response.token);
+  // };
   return (
     <Box
       sx={{
@@ -47,7 +48,7 @@ function LoginPage(props) {
       >
         <Box
           component="form"
-          onSubmit={handleLogin}
+          // onSubmit={handleLogin}
           sx={{
             display: "flex",
             flexDirection: "column",

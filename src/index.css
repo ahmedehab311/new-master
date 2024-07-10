@@ -99,8 +99,8 @@ input {
 }
 
 /* footer box2 */
-.midBox{
-
+.css-k008qs{
+  flex-direction: column;
 }
 /* footer box3 */
 .css-821wyw-MuiSvgIcon-root {
@@ -134,7 +134,7 @@ input {
 }
 
 @media (max-width: 900px) {
-  .css-1dzpn6f-MuiContainer-root {
+  .MuiContainer-root {
     flex-direction: column;
     text-align: center;
   }

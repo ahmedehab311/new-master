@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Typography, Box, Stack, CardMedia } from "@mui/material";
+import { Typography, Box, CardMedia } from "@mui/material";
 import Card from "@mui/material/Card";
 import "./card.css";
 import { itemes } from "./itemes.js";
@@ -29,8 +29,10 @@ function Boxx() {
 
   return (
     <Box className="box">
-      <Stack>
-        <Typography
+
+      {showCards ? (
+   <>
+   <Typography
           sx={{
             textAlign: "center !important",
             fontSize: "33px",
@@ -41,9 +43,7 @@ function Boxx() {
           }}
         >
           MENU
-        </Typography>
-      </Stack>
-      {showCards ? (
+        </Typography>   
         <Swiper
           slidesPerView={1}
           pagination={{ clickable: true }}
@@ -69,6 +69,7 @@ function Boxx() {
             },
           }}
         >
+
           {itemes.map((item) => (
             <SwiperSlide key={item.id}>
               <Card
@@ -85,6 +86,7 @@ function Boxx() {
                   cursor: "pointer",
                 }}
               >
+                      
                 <Typography
                   variant="h3"
                   sx={{
@@ -103,6 +105,7 @@ function Boxx() {
                   // height="194"
                   image={item.img}
                   alt="Paella dish"
+                  className="imgCard"
                 />
                 <Typography variant="h4" sx={{ fontSize: "20px", my: 1, color: "#fff"  }}>
                   {item.title2}
@@ -130,8 +133,10 @@ function Boxx() {
             </SwiperSlide>
           ))}
         </Swiper>
+   </>
       ) : (
         <Box sx={{ mt: 4 }}>
+        
           <Typography
             variant="h4"
             sx={{ textAlign: "center", mb: 2, textTransform: "uppercase", color: "#fff" }}
@@ -150,7 +155,7 @@ function Boxx() {
                 fontSize: "22px",
               }}
             >
-              Go Back
+               Back Menu
             </Typography>
           </Box>
         </Box>
