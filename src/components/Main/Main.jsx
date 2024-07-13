@@ -13,7 +13,7 @@ function Main() {
             width="500px"
             height="400px"
             alt="img"
-            className="img"
+            className="imgMain"
           />
         </Box>
         <Box sx={{ ml: 2 }}>

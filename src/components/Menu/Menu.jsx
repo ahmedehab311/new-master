@@ -1,11 +1,11 @@
 import { Stack } from "@mui/material";
-import Boxx from "./Card";
+import Card from "./Card";
 
 function Menu() {
   return (
     <div id="menu">
       <Stack>
-        <Boxx />
+        <Card />
       </Stack>
     </div>
   );

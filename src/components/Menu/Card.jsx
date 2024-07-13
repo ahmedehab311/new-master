@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Typography, Box, CardMedia } from "@mui/material";
+import { Typography, Box, CardMedia, Container } from "@mui/material";
 import Card from "@mui/material/Card";
 import "./card.css";
 import { itemes } from "./itemes.js";
@@ -44,7 +44,9 @@ function Boxx() {
         >
           MENU
         </Typography>   
-        <Swiper
+       <Container sx={{maxWidth:"100% !important" }} >
+       <Swiper
+       
           slidesPerView={1}
           pagination={{ clickable: true }}
           loop={true}
@@ -71,7 +73,7 @@ function Boxx() {
         >
 
           {itemes.map((item) => (
-            <SwiperSlide key={item.id}>
+            <SwiperSlide key={item.id} sx={{gap:3}}>
               <Card
                 className="card"
                 onClick={() => handleCardClick(item)}
@@ -133,6 +135,7 @@ function Boxx() {
             </SwiperSlide>
           ))}
         </Swiper>
+       </Container>
    </>
       ) : (
         <Box sx={{ mt: 4 }}>

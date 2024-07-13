@@ -132,7 +132,9 @@ input {
   width: 52px;
   height: 3px;
 }
-
+.imgMain{
+  width: 500px !important;
+}
 @media (max-width: 900px) {
   .MuiContainer-root {
     flex-direction: column;
