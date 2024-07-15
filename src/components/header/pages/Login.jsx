@@ -107,7 +107,7 @@ function LoginPage() {
             align="center"
             sx={{ mt: 2, fontSize: "18px" }}
           >
-            <Link component={RouterLink} to="/signup">
+            <Link component={RouterLink} to="/Register">
               Don't have an account? Sign up
             </Link>
           </Typography>

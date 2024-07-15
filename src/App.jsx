@@ -1,29 +1,34 @@
-/* eslint-disable no-unused-vars */
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import {Hero,Main,Menu,Footer,LoginPage,MainLayout,ForgetPass,SignUp} from "./components/header/index"
+import { Hero, Main, Menu, Footer, LoginPage, MainLayout, ForgetPass, Register } from "./components/header/index";
+import Error from "./components/header/pages/Error"; 
 import { useEffect, useState } from "react";
+
 function App() {
-  // const [isLoding, setIsLoding] = useState([]);
   const [token, setToken] = useState();
+
   const handleError = (response) => {
-    if (!Response.Ok) {
+    if (!response.ok) {
       throw Error(response.statusText);
     }
     return response.json();
   };
-  useEffect(()=>{
-    fetch("api",  {
-      method:"GET", 
-      headers:{
-        'contant-type' :'application',
-        'auth' :`Token ${token}`
-      }
-    })
 
+  useEffect(() => {
+    fetch("api", {
+      method: "GET",
+      headers: {
+        'content-type': 'application/json',
+        'auth': `Token ${token}`,
+      },
+    })
     .then(result => {
-
+   
     })
-  })
+    .catch(error => {
+    
+    });
+  }, [token]);
+
   return (
     <>
       <Router>
@@ -42,8 +47,9 @@ function App() {
             />
           </Route>
           <Route path="/login" element={<LoginPage setToken={setToken} />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/forgot-password" element={<ForgetPass />} />
+          <Route path="*" element={<Error />} /> {/* مسار صفحة الخطأ */}
         </Routes>
       </Router>
     </>

@@ -47,7 +47,7 @@ function Header() {
               borderRadius: "50%",
               p: "10px",
               "&:hover": {
-                backgroundColor: "rgba(0, 0, 0, 0.7)", // Darken the background on hover
+                backgroundColor: "rgba(0, 0, 0, 0.7)",
               },
             }}
           >

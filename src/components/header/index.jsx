@@ -5,6 +5,6 @@ import Footer from "../Footer/Footer";
 import LoginPage from "./pages/Login";
 import MainLayout from "./pages/MainLayout";
 import ForgetPass from "./pages/ForgetPass";
-import SignUp from "./pages/SignUp";
+import Register from "./pages/Register";
 
-export {Hero,Main,Menu,Footer,LoginPage,MainLayout,ForgetPass,SignUp}
+export {Hero,Main,Menu,Footer,LoginPage,MainLayout,ForgetPass,Register}

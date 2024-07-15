@@ -1,22 +1,46 @@
+/* eslint-disable no-unused-vars */
 import { Box, Card, Stack, Typography } from "@mui/material";
 import { itemes } from "./items2.js";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
  Dialog, DialogTitle,DialogContent,DialogContentText,FormControl, RadioGroup, FormControlLabel, TextField,Radio,} from "@mui/material";
 import Counter from "./counter.jsx";
+import axios from "axios";
 
-function ItemCard() {
-  const [selectedItem, setSelectedItem] = useState(null);
+function ItemCard({ selectedItem, handleBackClick }) {
   const [open, setOpen] = useState(false);
+  const [itemData, setItemData] = useState(null);
 
   const handleItemClick = (item) => {
-    setSelectedItem(item);
+    setItemData(item);
     setOpen(true);
   };
 
   const handleClose = () => {
     setOpen(false);
   };
+
+  // const [selectedItem, setSelectedItem] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [menuItems, setMenuItems] = useState([]);
+  
+  const APIURL = "https://myres.me/chilis/api/menu/2/1";
+  // const BASE_URL = "https://myres.me/chilis/";
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(APIURL);
+        console.log(response.data.data.menu[0].sections.items);
+        setMenuItems(response.data.data.menu[0].sections.items || []);
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
   return (
     <div style={{ color: "fff" }}>
       <Box
@@ -51,14 +75,12 @@ function ItemCard() {
             >
               {item.title}
             </Typography>
-       <img
+            <img
               src={item.img}
               width="50px"
               style={{ display: "flex", margin: "0 auto" }}
               alt=""
-              
             />
-
             <Typography variant="h4" sx={{ fontSize: "20px", my: 1 }}>
               {item.title2}
             </Typography>
@@ -84,6 +106,8 @@ function ItemCard() {
           </Card>
         ))}
       </Box>
+      
+{/* <DialogItemMenu handleClose={handleClose} /> */}
 
       <Dialog
         open={open}
@@ -98,8 +122,8 @@ function ItemCard() {
         >
           <Box>
             <img
-              src={selectedItem?.img}
-              alt={selectedItem?.title}
+              src={itemData?.img}
+              alt={itemData?.title}
               width={300}
               height={200}
               className="imgDialog"
@@ -113,7 +137,7 @@ function ItemCard() {
               justifyContent={"space-between"}
             >
               <DialogTitle id="item-dialog-title">
-                {selectedItem?.title}
+                {itemData?.title}
               </DialogTitle>
               <Stack direction={"row"} alignItems={"center"}>
                 <Counter />
@@ -122,13 +146,13 @@ function ItemCard() {
             </Stack>
             <div className="borderItem"></div>
             <Typography variant="body1" sx={{ mb: 2, color: "#000" }}>
-              {selectedItem?.description}
+              {itemData?.description}
             </Typography>
            
            <Stack>
            <FormControl component="fieldset">
               <Typography variant="h6" sx={{ color: "#000" }}>
-                any spical Request?
+                any special Request?
               </Typography>
             </FormControl>
 
@@ -141,8 +165,6 @@ function ItemCard() {
             />
      <Stack>
      <Typography variant="h6" sx={{ color: "#000",textAlign:"left" }}> 
-     {/* عايزين نعمل الميديا الصغيرة في الmargin */}
-     {/*الصورة في الdiolg */}
               Option
             </Typography>
             <Typography
