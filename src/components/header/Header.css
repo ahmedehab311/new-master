@@ -43,11 +43,15 @@
 }
 .css-1160xiw-MuiPaper-root-MuiDrawer-paper a {
   color: #fff !important;
-  padding: 6px !important;
+  padding: 12px !important;
   font-size: 20px !important;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.css-1160xiw-MuiPaper-root-MuiDrawer-paper a:not(:last-child) {
+    
+      border-bottom: 1px solid #333;
 }
 @media (max-width: 690px) {
   .headerMenu li a {
@@ -66,4 +70,18 @@
 }
 .css-1m716pe-MuiSvgIcon-root {
   color: #fff;
+}
+.headerMenu {
+  display: flex;
+  align-items: center;
+}
+
+.headerMenu .login-link {
+  margin-left: auto; /* أو أية مسافة تناسبك */
+  font-size: 16px; /* أو الحجم الذي يتناسب مع بقية النصوص */
+  color: #fff; /* تأكد من أن اللون متناسق مع التصميم */
+}
+
+.headerMenu .login-link:hover {
+  text-decoration: underline; /* أو أي تأثير آخر تفضله عند التمرير */
 }

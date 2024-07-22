@@ -29,7 +29,7 @@ function Counter() {
       <IconButton>
         <button
           style={{
-            fontSize: "14px",
+            fontSize: "18px",
             color: "white",
             borderRight: "0px",
             borderRadius: "0px 50% 50% 0px",
@@ -42,7 +42,7 @@ function Counter() {
       <Stack
         sx={{
           color: counter === 0 ? "gray" : "white",
-          fontSize: "13px",
+          fontSize: "12px",
         }}
       >
         {counter}
@@ -50,7 +50,7 @@ function Counter() {
       <IconButton>
         <button
           style={{
-            fontSize: "14px",
+            fontSize: "18px",
             marginLeft: "5px",
             color: "white",
             borderLeft: "0px",

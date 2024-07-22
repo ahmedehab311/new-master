@@ -1,9 +1,17 @@
 /* eslint-disable no-unused-vars */
 import { Box, Card, Stack, Typography } from "@mui/material";
-import { itemes } from "./items2.js";
 import { useState, useEffect } from "react";
 import {
- Dialog, DialogTitle,DialogContent,DialogContentText,FormControl, RadioGroup, FormControlLabel, TextField,Radio,} from "@mui/material";
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  FormControl,
+  RadioGroup,
+  FormControlLabel,
+  TextField,
+  Radio,
+} from "@mui/material";
 import Counter from "./counter.jsx";
 import axios from "axios";
 
@@ -20,19 +28,17 @@ function ItemCard({ selectedItem, handleBackClick }) {
     setOpen(false);
   };
 
-  // const [selectedItem, setSelectedItem] = useState(null);
   const [loading, setLoading] = useState(true);
   const [menuItems, setMenuItems] = useState([]);
   
   const APIURL = "https://myres.me/chilis/api/menu/2/1";
-  // const BASE_URL = "https://myres.me/chilis/";
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(APIURL);
-        console.log(response.data.data.menu[0].sections.items);
-        setMenuItems(response.data.data.menu[0].sections.items || []);
+        console.log(response.data.data.menu[0].sections[0].items);
+        setMenuItems(response.data.data.menu[0].sections[0].items || []);
       } catch (error) {
         console.error("Error fetching data: ", error);
       } finally {
@@ -41,6 +47,11 @@ function ItemCard({ selectedItem, handleBackClick }) {
     };
     fetchData();
   }, []);
+
+  if (loading) {
+    return <Typography>Loading...</Typography>;
+  }
+
   return (
     <div style={{ color: "fff" }}>
       <Box
@@ -51,7 +62,7 @@ function ItemCard({ selectedItem, handleBackClick }) {
           justifyContent: "center",
         }}
       >
-        {itemes.map((item) => (
+        {menuItems.map((item) => (
           <Card
             key={item.id}
             sx={{
@@ -73,7 +84,7 @@ function ItemCard({ selectedItem, handleBackClick }) {
                 fontSize: "2.5rem",
               }}
             >
-              {item.title}
+              {item.name_ar}
             </Typography>
             <img
               src={item.img}
@@ -106,8 +117,6 @@ function ItemCard({ selectedItem, handleBackClick }) {
           </Card>
         ))}
       </Box>
-      
-{/* <DialogItemMenu handleClose={handleClose} /> */}
 
       <Dialog
         open={open}
@@ -149,54 +158,54 @@ function ItemCard({ selectedItem, handleBackClick }) {
               {itemData?.description}
             </Typography>
            
-           <Stack>
-           <FormControl component="fieldset">
-              <Typography variant="h6" sx={{ color: "#000" }}>
-                any special Request?
-              </Typography>
-            </FormControl>
+            <Stack>
+              <FormControl component="fieldset">
+                <Typography variant="h6" sx={{ color: "#000" }}>
+                  Any special request?
+                </Typography>
+              </FormControl>
 
-            <TextField
-              multiline
-              rows={2}
-              variant="outlined"
-              fullWidth
-              sx={{ mt: 0, mb: 1 }}
-            />
-     <Stack>
-     <Typography variant="h6" sx={{ color: "#000",textAlign:"left" }}> 
-              Option
-            </Typography>
-            <Typography
-              variant="h6"
-              sx={{ color: "#000", textTransform: "capitalize", textAlign:"left"}}
-            >
-              add one
-            </Typography>
-            <RadioGroup sx={{ display: "flex " }}>
-              <Stack direction={"row"}>
-                <FormControlLabel
-                  sx={{ color: "#000" }}
-                  value="chicken"
-                  control={<Radio sx={{ color: "#000" }} />}
-                  label="Chicken 510 EGP"
-                />
-                <FormControlLabel
-                  value="beef"
-                  control={<Radio sx={{ color: "#000" }} />}
-                  label="Beef 650 EGP"
-                  sx={{ color: "#000" }}
-                />
-                <FormControlLabel
-                  value="combo"
-                  control={<Radio sx={{ color: "#000" }} />}
-                  label="Combo 610 EGP"
-                  sx={{ color: "#000" }}
-                />
+              <TextField
+                multiline
+                rows={2}
+                variant="outlined"
+                fullWidth
+                sx={{ mt: 0, mb: 1 }}
+              />
+              <Stack>
+                <Typography variant="h6" sx={{ color: "#000", textAlign:"left" }}> 
+                  Option
+                </Typography>
+                <Typography
+                  variant="h6"
+                  sx={{ color: "#000", textTransform: "capitalize", textAlign:"left"}}
+                >
+                  Add one
+                </Typography>
+                <RadioGroup sx={{ display: "flex " }}>
+                  <Stack direction={"row"}>
+                    <FormControlLabel
+                      sx={{ color: "#000" }}
+                      value="chicken"
+                      control={<Radio sx={{ color: "#000" }} />}
+                      label="Chicken 510 EGP"
+                    />
+                    <FormControlLabel
+                      value="beef"
+                      control={<Radio sx={{ color: "#000" }} />}
+                      label="Beef 650 EGP"
+                      sx={{ color: "#000" }}
+                    />
+                    <FormControlLabel
+                      value="combo"
+                      control={<Radio sx={{ color: "#000" }} />}
+                      label="Combo 610 EGP"
+                      sx={{ color: "#000" }}
+                    />
+                  </Stack>
+                </RadioGroup>
               </Stack>
-            </RadioGroup>
-     </Stack>
-           </Stack>
+            </Stack>
           </DialogContentText>
         </DialogContent>
       </Dialog>

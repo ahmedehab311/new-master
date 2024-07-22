@@ -23,11 +23,26 @@
 .css-1oqqzyl-MuiContainer-root {
   padding: 100px !important;
 }
-
+.css-10vcbbr-MuiTypography-root{
+  line-height: 1.435;
+  letter-spacing: 0.00735em;
+  color: #999;
+  font-size: 12px !important;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 7px;
+}
+.css-6ea6hv-MuiPaper-root-MuiCard-root{
+  text-align: center;
+}
+.css-1sfd9jb-MuiTypography-root{    margin: 15px;    font-size: 2.1rem;}
 /* dilog */
 .imgDialog {
-  width: 100px;
-  height: 100px;
+  width: 280px;
+  height: 280px;
+}
+.css-1yfbvc3-MuiDialogContent-root{
+  margin: 0 !important;
 }
 @media (max-width: 600px) {
   .css-1jv2z0n-MuiStack-root {
@@ -114,7 +129,11 @@
 .swiper-button-prev {
   left: 10px;
 }
+.css-14t339x-MuiPaper-root-MuiCard-root{
+  padding-right: 15px !important;
+  padding-left: 15px !important;
 
+}
 @media (max-width: 600px) {
   .swiper-button-next,
   .swiper-button-prev {
@@ -143,3 +162,6 @@
 .imgCard{
   width: 150px !important;
 }
+
+/*  */
+/* YourStyles.css */

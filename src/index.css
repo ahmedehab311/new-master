@@ -82,10 +82,11 @@ input {
   font-size: 1.6rem;
 }
 
-.resize-animation-stopper * {
-  animation: none !important;
-  transition: none !important;
-}
+.resize-animation-stopper *{
+  animation: none!important;
+  transition: none!important;
+} 
+
 
 /* box */
 .css-sgbe1q-MuiPaper-root-MuiCard-root {
@@ -101,6 +102,10 @@ input {
 /* footer box2 */
 .css-k008qs{
   flex-direction: column;
+}
+.css-qe6638-MuiStack-root{
+  /* -webkit-flex-direction: row !important; */
+  flex-direction:row !important;  
 }
 /* footer box3 */
 .css-821wyw-MuiSvgIcon-root {
@@ -134,6 +139,12 @@ input {
 }
 .imgMain{
   width: 500px !important;
+}
+@media (max-width: 600px) {
+  .imgMain{
+    width: 400px !important;
+    width: 100% !important;
+  }
 }
 @media (max-width: 900px) {
   .MuiContainer-root {

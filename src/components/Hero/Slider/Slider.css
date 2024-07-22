@@ -3,13 +3,20 @@
   /* position: relative; */
 }
 .img-fluid {
-  width: 282px !important;
+  width: 352px !important;
   /* height: 229px !important; */
 }
+
 @media (max-width: 700px) {
   .img-fluid {
     width: 200px !important;
     height: 200px !important;
+  }
+}
+@media (max-width: 500px) {
+  .img-fluid {
+    width: 115px !important;
+    /* height: 200px !important; */
   }
 }
 .logoImg {
