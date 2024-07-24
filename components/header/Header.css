@@ -1,0 +1,87 @@
+.headerMenu {
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 10px;
+  text-decoration: none !important;
+}
+.headerMenuflex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 10px;
+}
+.headerMenuflex li a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Open Sans";
+}
+.headerMenu li {
+  margin: 25px;
+}
+
+.headerMenu a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Open Sans";
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+  font-size: 30px !important;
+}
+.css-78trlr-MuiButtonBase-root-MuiIconButton-root {
+  color: #fff !important;
+}
+.css-1160xiw-MuiPaper-root-MuiDrawer-paper {
+  background-color: #000 !important;
+  width: 25% !important;
+}
+.css-1160xiw-MuiPaper-root-MuiDrawer-paper {
+  padding: 15px !important;
+}
+.css-1160xiw-MuiPaper-root-MuiDrawer-paper a {
+  color: #fff !important;
+  padding: 12px !important;
+  font-size: 20px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.css-1160xiw-MuiPaper-root-MuiDrawer-paper a:not(:last-child) {
+    
+      border-bottom: 1px solid #333;
+}
+@media (max-width: 690px) {
+  .headerMenu li a {
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .css-1160xiw-MuiPaper-root-MuiDrawer-paper {
+    background-color: #000 !important;
+    width: 50% !important;
+  }
+}
+
+/* icon button */
+.css-atxwc0-MuiSvgIcon-root {
+  color: #fff;
+}
+.css-1m716pe-MuiSvgIcon-root {
+  color: #fff;
+}
+.headerMenu {
+  display: flex;
+  align-items: center;
+}
+
+.headerMenu .login-link {
+  margin-left: auto; /* أو أية مسافة تناسبك */
+  font-size: 16px; /* أو الحجم الذي يتناسب مع بقية النصوص */
+  color: #fff; /* تأكد من أن اللون متناسق مع التصميم */
+}
+
+.headerMenu .login-link:hover {
+  text-decoration: underline; /* أو أي تأثير آخر تفضله عند التمرير */
+}
