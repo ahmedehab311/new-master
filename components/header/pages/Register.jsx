@@ -114,6 +114,8 @@ const Register = ({ setToken }) => {
           label="Email Address"
           {...register("email")}
           onBlur={emailOnBlurHandler}
+          // error={!!errors.email}
+          // helperText={errors.email?.message}
           // error={!!errors.email || emailAvailabilityStatus === "notAvailable"}
           // helperText={errors.email?.message || (emailAvailabilityStatus === "notAvailable" && "Email already in use")}
           variant="outlined"

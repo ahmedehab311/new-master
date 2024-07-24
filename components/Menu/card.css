@@ -35,7 +35,10 @@
 }
 .css-6ea6hv-MuiPaper-root-MuiCard-root {
   text-align: center;
+  /* height: -webkit-fit-content; */
+  height: 98%;
 }
+
 .css-1sfd9jb-MuiTypography-root {
   margin: 15px;
   font-size: 2rem;
@@ -64,6 +67,12 @@
 }
 .css-1yfbvc3-MuiDialogContent-root {
   margin: 0 !important;
+}
+.css-78trlr-MuiButtonBase-root-MuiIconButton-root{
+  justify-content: flex-end !important;
+}
+.css-78trlr-MuiButtonBase-root-MuiIconButton-root:hover{
+  background-color: transparent !important;
 }
 @media (max-width: 600px) {
   .css-1jv2z0n-MuiStack-root {

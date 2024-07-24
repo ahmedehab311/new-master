@@ -29,7 +29,7 @@ function Footer() {
        
       </Box>
       <Typography sx={{color:"#fff",background:"#e72323", fontWight:"600",fontSize:"16px", textAlign:"center", textTransform:"uppercase", pb:2}}>
-all rights reserved to chils egypt
+all rights reserved to chilis egypt
         </Typography>
       </Stack>
       

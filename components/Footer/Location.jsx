@@ -32,6 +32,7 @@ function Location() {
       className="custom-input" 
       sx={{
         width: '200px',
+
         margin: '10px 0',
         '& .MuiOutlinedInput-root': {
           '& fieldset': {

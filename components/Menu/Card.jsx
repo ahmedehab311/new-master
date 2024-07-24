@@ -123,7 +123,7 @@ function Boxx() {
     0: { slidesPerView: 1 },
     600: { slidesPerView: 2 },
     900: { slidesPerView: 3 },
-    1300: { slidesPerView: 4 },
+    1300: { slidesPerView: 3 },
   }}
 >
   {Array.isArray(menuItems) &&
@@ -213,6 +213,11 @@ function Boxx() {
                       background: "#000",
                       borderRadius: "20px",
                       cursor: "pointer",
+                      display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "center",  // Center items horizontally
+            height: "97%", 
                     }}
                     onClick={() => handleItemClick(item)}
                   >
@@ -252,7 +257,7 @@ function Boxx() {
                          fontFamily:"Brother  !important"
                       }}
                     >
-                      {item.name_ar}
+                      {item.name_en}
                     </Typography>
                     <Typography
                       variant="h5"
@@ -269,7 +274,7 @@ function Boxx() {
                     <Typography sx={{ fontSize: "18px", color: "#777" }}>
                       {item.price}
                     </Typography>
-                    <IconButton onClick={() => handleItemClick(item)}>
+                    <IconButton onClick={() => handleItemClick(item)}  sx={{ mt: 'auto', width: '100%', textAlign: 'center' }}>
                       <Button variant="contained" color="error">
                         ORDER
                       </Button>
@@ -350,7 +355,7 @@ function Boxx() {
                         textAlign: "left",
                       }}
                     >
-                      Add one
+                      Add on
                     </Typography>
                     <RadioGroup sx={{ display: "flex " }}>
                       <Stack direction={"row"}>
@@ -375,6 +380,11 @@ function Boxx() {
                       </Stack>
                     </RadioGroup>
                   </Stack>
+                  <IconButton   sx={{ mt: 'auto', width: '100%', textAlign: 'center' }}>
+                      <Button variant="contained" color="error">
+                        Add to card
+                      </Button>
+                    </IconButton>
                 </Stack>
               </DialogContentText>
             </DialogContent>
