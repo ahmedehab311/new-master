@@ -1,4 +1,5 @@
 
+
 import { useState, useEffect } from "react";
 import {
   Dialog,
@@ -8,7 +9,6 @@ import {
   FormControl,
   RadioGroup,
   FormControlLabel,
-  TextField,
   Radio,
   Button,
   IconButton,
@@ -30,9 +30,9 @@ import "swiper/css/navigation";
 import "./card.css";
 import "./sliderMenu.css";
 import "./Dialog/Dialog.css"
+import AddToCardButton from "./ButtonsMenu/AddToCardButton"
 const APIURL = "https://myres.me/chilis/api/menu/2/1";
 const BASE_URL = "https://myres.me/chilis/";
-
 function Boxx() {
   const [showCards, setShowCards] = useState(true);
   const [selectedItem, setSelectedItem] = useState(null);
@@ -68,36 +68,16 @@ function Boxx() {
     setOpenDialog(false);
   };
 
-  // const handleItemClick = async (item) => {
-  //   try {
-  //     const response = await axios.get(
-  //       `https://myres.me/chilis/api/item/${item.id}/1`
-  //     );
-  //     setItemDetails(response.data);
-
-  //     console.log(response.data.info[0].price.price);
-  //     setPrice(response.data.info[0].price.price);
-
-  //     console.log(response.data);
-
-  
-  //     console.log(response.data.item_extras[0].data);
-  //     setDataExtra(response.data.item_extras[0].data);
-  //     setOpenDialog(true);
-
-  //   } catch (error) {
-  //     console.error("Error fetching item details: ", error);
-  //   }
-  // };
   const handleItemClick = async (item) => {
     try {
       const response = await axios.get(
         `https://myres.me/chilis/api/item/${item.id}/1`
       );
       setItemDetails(response.data);
+    console.log(response.data);
       setPrice(response.data.info[0].price.price);
   
-      // تحقق من وجود بيانات في item_extras[0].data
+      console.log(response.data.item_extras[0]?.data) 
       if (response.data.item_extras[0]?.data) {
         setDataExtra(response.data.item_extras[0].data);
       } else {
@@ -336,17 +316,19 @@ function Boxx() {
                     sx={{ color: "#000" }}
                     value={extra.description_en}
                     control={<Radio sx={{ color: "#000" }} />}
-                    label={extra.description_en}
+                    // label={extra.description_en }
+                    label={`${extra.description_en} - ${extra.price_en} EGP`}
                   />
                 ))}
               </RadioGroup>
             </FormControl>
           )}
+  <AddToCardButton/>
         </DialogContentText>
       </DialogContent>
     )}
   </Dialog>
-
+{/* <Diaolg/> */}
           <Box sx={{ textAlign: "center", mt: 4 }}>
             <Button
               variant="contained"
